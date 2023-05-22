@@ -1,0 +1,7 @@
+App\App.class
+ejbs\Runner.class
+ejbs\User.class
+ejbs\Order.class
+ejbs\Meal.class
+ejbs\Restaurant.class
+service\userService.class
