@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "562d9b54-bda1-414a-9dd5-46f8992033b0",
+		"name": "Al-Akeel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22241636"
+	},
+	"item": [
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "createRestaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"kfs\",\r\n    \"ownerId\": 1,\r\n    \"meals\":[\r\n        {\r\n            \"name\":\"zinger\",\r\n            \"price\" : 20\r\n        },\r\n        {\r\n            \"name\":\"kfs\",\r\n            \"price\":30\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/restaurants/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"restaurants",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllRestaurants",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "addNewMeal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/restaurants/create-meal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"restaurants",
+								"create-meal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRestaurantById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/restaurants/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"restaurants",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meals",
+			"item": [
+				{
+					"name": "GetAllMeals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/meals/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"meals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMeal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"zinger\",\r\n    \"price\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/meals/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"meals",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Runner",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"youusssef\",\r\n    \"password\" : \"111\",\r\n    \"deliveryFees\":20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/runners/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"runners",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orderCompleted",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/runners/order-completed/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"runners",
+								"order-completed",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orderCanceled",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/runners/order-canceled/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"runners",
+								"order-canceled",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getNumberOfTrips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/runners/trips/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"runners",
+								"trips",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"yyyyy\",\r\n    \"password\":\"adasd \",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/users/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editorder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"meals\":[\r\n        {\r\n            \"name\":\"zinger\"\r\n        }\r\n    ],\r\n    \"orderBy\": {\r\n            \"name\":\"kfc\"\r\n        }\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/users/edit-order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"users",
+								"edit-order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"meals\": [\r\n        {\r\n            \"name\": \"zinger chicken\"\r\n        }\r\n    ],\r\n    \"orderBy\": {\r\n        \"name\": \"kfc\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Al-Akeel/api/users/create-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Al-Akeel",
+								"api",
+								"users",
+								"create-order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
